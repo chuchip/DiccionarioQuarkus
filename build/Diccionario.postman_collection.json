@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "00fa5fb7-1a22-4723-94bc-923e97cec534",
+		"name": "Diccionario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Espanol",
+			"item": [
+				{
+					"name": "Borrar todo",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/espanol",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Espanol",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"descripcion\": \"Salud2\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/espanol/hola1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol",
+								"hola1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Hola",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"palabra\": \"hola\",\r\n        \"descripcion\": \"Utilizado para saluar\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/espanol",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Adios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"palabra\": \"adios\",\r\n        \"descripcion\": \"Utilizado para despedir\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/espanol",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEspañol",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/espanol/hola",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol",
+								"hola"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll Español",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/espanol/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find hola",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/espanol/hola",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"espanol",
+								"hola"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingles",
+			"item": [
+				{
+					"name": "Insert Ingles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"palabra\": \"hi\",\r\n        \"palabraEspanol\": \"hola\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ingles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ingles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll ingles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ingles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ingles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update hi",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"palabra\": \"hi\",\r\n        \"palabraEspanol\": \"xx\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ingles/hi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ingles",
+								"hi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find Hi",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ingles/hi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ingles",
+								"hi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete hi",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ingles/hi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ingles",
+								"hi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,7 +1,22 @@
-docker volume create postgres_diccionario
-docker run -d --volume postgres_diccionario:/var/lib/postgresql/data --name postgres_diccionario -ePOSTGRES_USER=postgres  -e POSTGRES_PASSWORD=pass -e POSTGRES_DB=diccionario -p 5432:5432 postgres
+# Proyecto Diccionario
 
-# diccionario Project
+Para probar la aplicación, he dejado  en la carpeta build estan los ficheros preparados para ejecutar en un docker-compose.
+
+Simplemente ejecutar el script 'deploy.bat' el cual creará dos dockers. Uno con una base de datos postgres y otra con la aplicación en Quarkus.
+
+La aplicación en Quarkus esta escuchando en el puerto 8080 y Postgres en el 5432.
+
+Para parar  la aplicación ejecutar: 
+
+> docker-compose down
+
+En esa misma carpeta teneis una colección de postman para importar y que permitirá realizar tests y teneis los endpoints definidos.
+
+
+
+
+
+------
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
