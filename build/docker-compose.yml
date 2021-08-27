@@ -15,6 +15,8 @@ services:
       environment:
         SERVICE_NAME: diccionario      
         quarkus.datasource.jdbc.url: jdbc:postgresql://postgres_diccionario:5432/diccionario
+        quarkus.http.cors: "true"
+      restart: unless-stopped
       depends_on:
         - postgres_diccionario
     postgres_diccionario:
@@ -28,7 +30,7 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: pass
         POSTGRES_DB: diccionario
-    
+      restart: unless-stopped
 networks:
   diccionario:
     external: false

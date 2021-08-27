@@ -13,8 +13,14 @@ Para parar  la aplicación ejecutar:
 En esa misma carpeta teneis una colección de postman para importar y que permitirá realizar tests y teneis los endpoints definidos.
 
 
+# En modo DEV.
 
+Crear se debera tener lanzado un docker Postgres con estos parametros:
 
+```
+docker volume create postgres_diccionario
+docker run -d --volume postgres_diccionario:/var/lib/postgresql/data --name postgres_dev_diccionario -ePOSTGRES_USER=postgres  -e POSTGRES_PASSWORD=pass -e POSTGRES_DB=diccionario -p 5432:5432 postgres
+```
 
 ------
 
